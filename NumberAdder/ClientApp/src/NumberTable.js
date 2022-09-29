@@ -42,7 +42,7 @@ class NumberTable extends React.Component {
     }
     onUnLockedClick = p => {
         const lockedNumbers = this.state.lockedNumbers.filter(n => p.id !== n.id);
-        this.setState({lockedNumbers});
+        this.setState({ lockedNumbers });
     }
     isSelected = p => {
         const { selectedNumber } = this.state;
@@ -53,7 +53,7 @@ class NumberTable extends React.Component {
         return lockedNumbers.some(s => s.id === p.id);
     }
     render() {
-        const { numbers, selectedNumber,lockedNumbers } = this.state;
+        const { numbers, selectedNumber, lockedNumbers } = this.state;
         return (
             <div className="container mt-5">
                 <button className="btn btn-lg btn-success" onClick={this.onAddClick}>Add</button>
